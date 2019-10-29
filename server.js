@@ -29,6 +29,8 @@ app.all('*', (req, res) => {
     accept,
   } = headers;
 
+  console.log(`${proxy}${originalUrl}`)
+
   if (method === 'POST') {
 
     return fetch(`${proxy}${originalUrl}`, {
